@@ -9,6 +9,7 @@ namespace PinFolder.Model
     class Configuration
     {
         public List<Calendar> calendar { get; set; }
+        [Obsolete]
         public string prev_dir { get; set; }
         public string folder_dir { get; set; }
         public bool verbose { get; set; }

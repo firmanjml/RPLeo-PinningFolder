@@ -15,6 +15,7 @@ namespace PinFolder
 
         static void Main(string[] args)
         {
+            Console.Title = "PinFolder Program created by Firman Jamal";
             Configuration config = JsonConvert.DeserializeObject<Configuration>(Utils.loadFile($"{Utils.CURRENT_DIRECTORY}\\config.json"));
 
             verbose = (config.verbose) ? true : false;
@@ -35,16 +36,16 @@ namespace PinFolder
                 }
             }
 
-            if (!String.IsNullOrEmpty(config.prev_dir))
-            {
-                if (verbose)
-                {
-                    Console.WriteLine("Removing current lesson from taskbar...");
-                }
-                Utils.startProgram(config.prev_dir, false);
-                Utils.saveFile($"{Utils.CURRENT_DIRECTORY}\\config.json", "");
-                Thread.Sleep(3000);
-            }
+            //if (!String.IsNullOrEmpty(config.prev_dir))
+            //{
+            //    if (verbose)
+            //    {
+            //        Console.WriteLine("Removing current lesson from taskbar...");
+            //    }
+            //    Utils.startProgram(config.prev_dir, false);
+            //    Utils.saveFile($"{Utils.CURRENT_DIRECTORY}\\config.json", "");
+            //    Thread.Sleep(3000);
+            //}
 
             Dictionary<string, Calendar> dict = new Dictionary<string, Calendar>();
             foreach (Calendar calendar in config.calendar)
@@ -70,8 +71,8 @@ namespace PinFolder
                     Console.WriteLine($"Module Venue {c.Venue}");
                 }
 
-                Utils.startProgram($"{Utils.CURRENT_DIRECTORY}\\Modules\\{c.Title}.lnk", true);
-                Utils.saveFile($"{Utils.CURRENT_DIRECTORY}\\config.json", $"{Utils.CURRENT_DIRECTORY}\\Modules\\{c.Title}.lnk");
+                Utils.startProgram($"{Utils.CURRENT_DIRECTORY}\\Modules\\{c.Title}.lnk");
+                //Utils.saveFile($"{Utils.CURRENT_DIRECTORY}\\config.json", $"{Utils.CURRENT_DIRECTORY}\\Modules\\{c.Title}.lnk");
             }
 
             if (verbose)

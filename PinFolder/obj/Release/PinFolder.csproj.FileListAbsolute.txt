@@ -1,0 +1,11 @@
+C:\Users\17044634\source\repos\PinFolder\PinFolder\bin\Release\PinFolder.exe.config
+C:\Users\17044634\source\repos\PinFolder\PinFolder\bin\Release\PinFolder.exe
+C:\Users\17044634\source\repos\PinFolder\PinFolder\bin\Release\PinFolder.pdb
+C:\Users\17044634\source\repos\PinFolder\PinFolder\bin\Release\Newtonsoft.Json.dll
+C:\Users\17044634\source\repos\PinFolder\PinFolder\bin\Release\Newtonsoft.Json.xml
+C:\Users\17044634\source\repos\PinFolder\PinFolder\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\17044634\source\repos\PinFolder\PinFolder\obj\Release\PinFolder.csproj.ResolveComReference.cache
+C:\Users\17044634\source\repos\PinFolder\PinFolder\obj\Release\PinFolder.csproj.CoreCompileInputs.cache
+C:\Users\17044634\source\repos\PinFolder\PinFolder\obj\Release\PinFolder.csproj.CopyComplete
+C:\Users\17044634\source\repos\PinFolder\PinFolder\obj\Release\PinFolder.exe
+C:\Users\17044634\source\repos\PinFolder\PinFolder\obj\Release\PinFolder.pdb

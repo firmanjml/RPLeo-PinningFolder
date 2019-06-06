@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace PinFolder
         public static DateTime DATE_NOW = DateTime.Now.Date;
         private static short PIN_TO_TASKBAR = 5386;
         private static short UNPIN_TO_TASKBAR = 5387;
+        
 
         public static String loadFile(string path)
         {
@@ -39,6 +41,7 @@ namespace PinFolder
             return "";
         }
 
+        [Obsolete("This method is deprecated. No longer using syspin.exe", true)]
         public static bool saveFile(string path, string data)
         {
             try
@@ -64,6 +67,7 @@ namespace PinFolder
             return dt.AddMilliseconds(ts).ToLocalTime().Date;
         }
 
+        [Obsolete("This method is deprecated, please use startProgram(str) instead.", true)]
         public static void startProgram(string path, bool pin)
         {
             Process process = new Process();
@@ -71,6 +75,11 @@ namespace PinFolder
             process.StartInfo.Arguments = $"{path} " + (pin ? PIN_TO_TASKBAR : UNPIN_TO_TASKBAR);
             process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             process.Start();
+        }
+
+        public static void startProgram(string path)
+        {
+            Process.Start(path);
         }
 
         public static void createShortcut(string path, string name)
@@ -82,6 +91,5 @@ namespace PinFolder
             shortcut.WindowStyle = 1;
             shortcut.Save();
         }
-
     }
 }
