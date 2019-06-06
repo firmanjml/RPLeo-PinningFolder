@@ -7,8 +7,6 @@ The calendar data must be retrieved manually from L.E.O via RetrieveEvents post 
 
 ## Installation & Program configuration
 
-RPLeo-FolderPinning requires [Syspin.exe](http://www.technosys.net/products/utils/pintotaskbar) to run.
-
 Download the program and place it in the same directory where the program is.
 
 Make config.json and put it in the same directory.
