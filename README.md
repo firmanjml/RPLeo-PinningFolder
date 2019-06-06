@@ -51,7 +51,6 @@ Example of the config.json can be found below.
       "MClassId": "xxxxxxx-xxxxx-xxxx-xxx-xxxxxx"
     }
   ],
-  "prev_dir": "",
   "folder_dir": "D:\\Schools\\Semester 1",
   "verbose": true,
   "verbose_sleep_time": 3
@@ -62,7 +61,7 @@ Example of the config.json can be found below.
 | Key | Type | Info | Mandatory
 | ------ | ------ | ------ | ------ |
 | calendar | Array of Objects | Information of your calendar | tue
-| prev_dir | String | Cache directory of current lesson | false
+| prev_dir | String | Cache directory of current lesson (No longer using this)  | false
 | folder_dir | String | The directory of your lessons folder | true
 | verbose | Boolean | Show more more information | true
 | verbose_sleep_time | Integer | Delay of verbose mode | true
